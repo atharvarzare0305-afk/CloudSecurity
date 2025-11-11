@@ -1,0 +1,39 @@
+{
+  "account_id": "123456789012",
+  "findings": [
+    {
+      "check": "root_mfa_enabled",
+      "result": false,
+      "severity": "high",
+      "msg": "Root account MFA is NOT enabled"
+    },
+    {
+      "check": "user_mfa",
+      "user": "bob",
+      "result": false,
+      "severity": "high",
+      "msg": "User has no MFA"
+    },
+    {
+      "check": "s3_public",
+      "bucket": "public-photos",
+      "result": false,
+      "severity": "high",
+      "msg": "S3 bucket is public"
+    },
+    {
+      "check": "sg_open_admin_port",
+      "sg": "sg-001",
+      "port": 22,
+      "result": false,
+      "severity": "high",
+      "msg": "Admin port open to world"
+    },
+    {
+      "check": "cloudtrail",
+      "result": false,
+      "severity": "medium",
+      "msg": "CloudTrail / audit logging not enabled"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "cloud-security-node",
+  "version": "1.0.0",
+  "description": "Cloud Security Demo Scanner (Node.js)",
+  "main": "scanner/cloud_scanner.js",
+  "scripts": {
+    "scan": "node scanner/cloud_scanner.js ../lab/sample_inventory.json"
+  },
+  "dependencies": {}
+}

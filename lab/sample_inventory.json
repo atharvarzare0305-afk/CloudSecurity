@@ -1,0 +1,59 @@
+{
+  "account_id": "123456789012",
+  "root_mfa_enabled": false,
+  "users": [
+    {
+      "username": "alice",
+      "mfa": true,
+      "policies": [
+        "ReadOnlyAccess"
+      ]
+    },
+    {
+      "username": "bob",
+      "mfa": false,
+      "policies": [
+        "AdministratorAccess"
+      ]
+    }
+  ],
+  "s3_buckets": [
+    {
+      "name": "public-photos",
+      "public": true,
+      "versioning": false
+    },
+    {
+      "name": "assets",
+      "public": false,
+      "versioning": true
+    }
+  ],
+  "security_groups": [
+    {
+      "id": "sg-001",
+      "name": "web-sg",
+      "ingress": [
+        {
+          "port": 80,
+          "cidr": "0.0.0.0/0"
+        },
+        {
+          "port": 22,
+          "cidr": "0.0.0.0/0"
+        }
+      ]
+    },
+    {
+      "id": "sg-002",
+      "name": "db-sg",
+      "ingress": [
+        {
+          "port": 3306,
+          "cidr": "10.0.0.0/16"
+        }
+      ]
+    }
+  ],
+  "cloudtrail_enabled": false
+}
